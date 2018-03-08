@@ -1,0 +1,32 @@
+body {
+  min-height: 100%;
+  color: $text-black;
+
+  @extend %font-ms-300;
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6 {
+  @extend %font-ms-300;
+}
+
+p {
+  color: $text-black;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo {
+  max-width: 128px;
+  height: auto;
+}
+
+#navbar {
+  background-color: $pink;
+   a{
+    color: $white;
+   }
+}

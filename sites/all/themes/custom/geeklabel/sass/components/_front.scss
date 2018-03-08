@@ -1,0 +1,386 @@
+.slide {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 400px;
+
+  &.pink {
+    background-color: $pink;
+    color: $white;
+  }
+  
+  &.grey {
+    background-color: $light-grey;
+  }
+
+  &__title {
+    font-size: 32px;
+    margin: 40px 0;
+    font-weight: normal;
+
+    @include breakpoint($up-sm){
+      font-size: 84px;  
+      margin: 100px 0;
+    }
+    
+  }
+
+  &__arrow {
+    display: block;
+    position: relative;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    margin: 40px 0 20px 0;
+    border: 2px solid $white;
+    background-color: $pink;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    @include transition(all);
+
+    @include breakpoint($up-sm) {
+      width: 70px;
+      height: 70px;
+      margin: 60px 0;    
+      border: 3px solid $white;  
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 53%;
+      left: 50%;
+      transform: rotate(-135deg) translateY(50%);
+      transform-origin: 0;
+      border-top: 3px solid $white;
+      border-left: 3px solid $white;
+      border-color: inherit;
+      @include transition(all);
+      @include breakpoint($up-sm) { 
+        width: 15px;
+        height: 15px;        
+      }
+    }
+
+    &:hover {
+      background-color: $white;
+      &:before {
+        background-color: transparent;
+        border-color: $pink;
+      }
+    }
+  }
+
+  &--black-arrow {
+    .slide__arrow {
+      border-color: $text-black;
+      background-color: transparent;
+      box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1); 
+      &:before {
+        border-color: $text-black;
+      }
+      &:hover {
+        background-color: $text-black;
+        &:before {
+          background-color: transparent;
+          border-top-color: $white;
+          border-left-color: $white;
+        }
+      }           
+    } 
+  }
+
+  &--top {
+    justify-content: flex-end;
+    &__logo {
+      max-width: 340px;
+      width: 80%;
+    }
+
+    &__slogan {
+      font-size: 18px;
+      line-height: 1.6;
+      padding: 60px 0 40px 0;
+      max-width: 540px;
+      text-align: center;
+
+      @include breakpoint($up-sm) {
+        font-size: 24px;
+        padding: 100px 0 20px 0;        
+      }
+    }
+  }
+
+  &--highlights {
+    position: relative;
+    &__img {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 80%;
+
+        @include breakpoint($up-sm) {
+          width: 100%; 
+          max-width: 600px;           
+        }
+      }
+    }
+
+    &__desc {
+      font-size: 24px;
+      line-height: 1.5;
+      text-align: center;
+      @include breakpoint($up-sm) {
+        font-size: 36px;
+        line-height: 1.8;        
+      }
+
+    }  
+  }
+
+  &--services {
+    justify-content: flex-start;
+    position: relative;
+
+    &__cont {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      max-width: 280px;
+      justify-content: space-around;
+      flex-grow: 1;
+
+      @include breakpoint($up-sm) {
+        max-width: 1280px;
+        flex-direction: row; 
+        justify-content: flex-start;
+      }
+    }  
+
+    &-list {
+      @extend %font-ms-300-rnd;
+
+      display: flex;
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+      flex-direction: row;
+      padding: 0;
+      align-items: center;
+
+      @include breakpoint($up-sm) {
+        font-size: 24px; 
+        display: block;
+        padding: 0 15px;
+        margin-bottom: 0;
+      }
+
+      &.ux-research {
+        &:before {
+          background-image: image-url('ux-research.png');
+          background-position: center center;
+          background-size: 50% auto;
+          background-repeat: no-repeat;
+        }
+      }
+
+      &.branding {
+        &:before {
+          background-image: image-url('branding.png');
+          background-position: center center;
+          background-size: 50% auto;
+          background-repeat: no-repeat;
+        }
+      }      
+
+      &.design {
+        &:before {
+          background-image: image-url('design.png');
+          background-position: center center;
+          background-size: 50% auto;
+          background-repeat: no-repeat;
+        }
+      }
+
+      &.web-development {
+        &:before {
+          background-image: image-url('web-development.png');
+          background-position: center center;
+          background-size: 50% auto;
+          background-repeat: no-repeat;
+        }
+      }      
+      
+      &::before {
+        content: '';
+        display: block;
+        width: 60px;
+        padding-top: 60px;
+        border-radius: 100%;
+        background-color: $pink;
+        margin-right: 15px; 
+
+        @include breakpoint($up-xs) {
+          width: 80px;
+          padding-top: 80px; 
+          margin-right: 20px;         
+        }
+        @include breakpoint($up-sm) {
+          content: '';
+          display: block;
+          width: 75%;
+          margin: 0 auto;
+          padding-top: 75%;
+          border-radius: 100%;
+          background-color: $pink;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
+  &--clients {
+    &__cont {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 1360px;
+      padding: 0 20px;
+      .slick-el {
+        width: 100%;
+      }
+      .slick-list {
+        margin: 60px 0;
+
+        @include breakpoint($up-sm) {
+          margin: 0;    
+        }
+      }
+      .views-row {
+        @include breakpoint($up-sm) {
+          margin-right: 40px;  
+        }
+      }
+    }
+
+    &__image {
+      text-align: center;
+
+      @include breakpoint($up-sm) {
+        text-align: left;
+      }
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &--map {
+    padding: 0;
+    @include breakpoint($up-sm) {
+      padding: 0 $gutter-width/2;
+    }
+    .map-el {
+      width: 100%;
+      padding-top: 110%;
+
+      @include breakpoint($up-xs) {
+        padding-top: 70%;
+      }
+
+      @include breakpoint($up-sm) {
+        padding-top: 25%;  
+      }
+      
+    }
+    &__content {
+      flex-grow: 1;
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      .gm-style {
+        @extend %font-ms-300;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+.contact-form {
+  max-width: 85%;
+  margin: 0 auto;
+  @include breakpoint($up-sm) {
+    max-width: 560px;
+  }
+  .form-item {
+    margin-bottom: 30px;
+    border: 2px solid $grey;
+    border-radius: 2px;
+    .grippie {
+      display: none;
+    }
+    margin-bottom: 15px;
+
+    @include breakpoint($up-sm) {
+      margin-bottom: 30px;
+      border: 3px solid $grey;
+    }
+    input, 
+    textarea {
+      font-size: 18px;
+      line-height: 26px;
+      padding: 10px;
+      border-radius: 0;
+      border: 0;  
+      resize: none;
+      @include breakpoint($up-sm) {
+        font-size: 24px;
+        line-height: 36px;
+        padding: 10px 20px;
+      }
+    }
+    input {
+      height: 46px;
+
+      @include breakpoint($up-sm) {
+        height: 62px;
+      }      
+    }
+  }
+  .form-actions {
+    button {
+      display: block;
+      width: 100%;
+      border-radius: 3px;
+      font-size: 18px;
+      line-height: 24px;
+      padding: 10px 20px;  
+      border: 2px solid $pink;    
+      background: $pink;
+      color: $white;
+      @include transition(all);
+
+      @include breakpoint($up-sm) {
+        font-size: 24px;
+        line-height: 36px;
+        padding: 10px 20px;
+        border: 3px solid $pink;      
+      }      
+
+      &:hover {
+        background: $white;
+        color: $pink;
+      }
+    }
+  } 
+}

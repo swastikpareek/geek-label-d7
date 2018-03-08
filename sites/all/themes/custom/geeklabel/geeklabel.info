@@ -1,0 +1,23 @@
+name = Geek Label
+description = Simple theme for Geek Lab page - extending bootstrap
+core = 7.x
+base theme = bootstrap
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[content]        = 'Content'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Theme Assets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = node_modules/normalize.css/normalize.css
+stylesheets[all][] = css/main.css
+
+scripts[] = js/script.js

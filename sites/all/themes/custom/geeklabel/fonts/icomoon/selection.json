@@ -1,0 +1,96 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M853.333 128h-682.667c-72.533 0-128 55.467-128 128v512c0 72.533 55.467 128 128 128h682.667c72.533 0 128-55.467 128-128v-512c0-72.533-55.467-128-128-128zM170.667 213.333h682.667c17.067 0 29.867 8.533 38.4 25.6l-379.733 264.533-379.733-264.533c8.533-17.067 21.333-25.6 38.4-25.6zM853.333 810.667h-682.667c-25.6 0-42.667-17.067-42.667-42.667v-430.933l358.4 251.733c8.533 4.267 17.067 8.533 25.6 8.533s17.067-4.267 25.6-8.533l358.4-251.733v430.933c0 25.6-17.067 42.667-42.667 42.667z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "mail"
+        ],
+        "grid": 24
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 1,
+        "id": 0,
+        "name": "mail",
+        "prevSize": 24,
+        "code": 59648
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
+          "M704 640c-64 64-64 128-128 128s-128-64-192-128-128-128-128-192 64-64 128-128-128-256-192-256-192 192-192 192c0 128 131.5 387.5 256 512s384 256 512 256c0 0 192-128 192-192s-192-256-256-192z"
+        ],
+        "tags": [
+          "phone",
+          "telephone",
+          "contact",
+          "support",
+          "call"
+        ],
+        "defaultCode": 59714,
+        "grid": 16,
+        "attrs": []
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "phone, telephone",
+        "name": "phone",
+        "order": 2,
+        "id": 67,
+        "prevSize": 32,
+        "code": 59714
+      },
+      "setIdx": 1,
+      "setId": 1,
+      "iconIdx": 66
+    }
+  ],
+  "height": 1024,
+  "metadata": {
+    "name": "icomoon"
+  },
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "icon-",
+      "metadata": {
+        "fontFamily": "icomoon"
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon"
+    },
+    "historySize": 50,
+    "showCodes": true,
+    "gridSize": 16
+  }
+}

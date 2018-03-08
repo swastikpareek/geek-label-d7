@@ -1,0 +1,28 @@
+/**
+ * Colors Vars
+ **/
+
+$light-grey: #f1f2f2;
+$pink: #d83454;
+$text-black: #414042;
+$white: #fff;
+$light-arrow: #a7aeb0;
+$grey: #ccc;
+$para-text: #414042;
+$active-dot: #5e6b6e;
+
+/** 
+ * Breakpoint vars
+ */
+
+$screen : "only screen" !default;
+$tablet-min: 768px;
+$mobile-min: 450px;
+
+$mobile-max:  $tablet-min - 1;
+
+$gutter-width: 30px;
+
+$down-mob: #{$screen} max-width $mobile-max; 
+$up-sm: #{$screen} $tablet-min;
+$up-xs: #{$screen} $mobile-min;
