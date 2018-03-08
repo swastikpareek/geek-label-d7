@@ -44,6 +44,8 @@
  * @ingroup themeable
  */
 ?>
+<?php global $base_url; ?>
+
 <section class="container-fluid grey slide slide--map" <?php print $attributes; ?>>
   <?php print render($title_prefix); ?>
 <?php if ($block->subject): ?>
@@ -58,6 +60,7 @@
 <script async defer
   src="https://maps.googleapis.com/maps/api/js?key= AIzaSyC9mOKxYB8RmqmOWVjf8idBO0j0jmOSXnY&callback=initMap">
 </script>
+
 <script type="text/javascript">
   function initMap() {
     var style = [
@@ -275,7 +278,7 @@
       position: uluru,
       map: map,
       title: 'seas',
-      icon: '<?php print('/' . drupal_get_path('theme', 'geeklabel') . '/images/map-marker.png'); ?>'
+      icon: '<?php print($base_url . '/' . drupal_get_path('theme', 'geeklabel') . '/images/map-marker.png'); ?>'
     });
     var infowindow = new google.maps.InfoWindow({
       content: 'Geek Label <br/>4th Floor, 27 - 33 Bethnal Green Road</br/>Shoreditch, London, E1 6LA',
